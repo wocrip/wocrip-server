@@ -1,0 +1,65 @@
+{
+  "name": "wocrip-server",
+  "version": "0.1.0",
+  "description": "World Crisis Platform server.",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "cross-env nodemon --exec babel-node ./src/server.js",
+    "start:production": "npm run build && node dist/server.js $PORT",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "build": "babel src -d dist --copy-files --source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wocrip/wocrip-server.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "Node.js",
+    "GraphQL",
+    "Express",
+    "Apollo",
+    "wocrip",
+    "world crisis platform",
+    "server"
+  ],
+  "bugs": {
+    "url": "https://github.com/wocrip/wocrip-server/issues"
+  },
+  "homepage": "https://github.com/wocrip/wocrip-server#readme",
+  "dependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "apollo-server-express": "2.9.9",
+    "bcrypt": "3.0.7",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "cross-env": "6.0.3",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "graphql": "14.5.8",
+    "graphql-date": "^1.0.3",
+    "graphql-request": "1.8.2",
+    "graphql-tools": "^4.0.6",
+    "graphql-type-json": "0.3.0",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "4.17.15",
+    "mongoose": "5.7.7",
+    "node-fetch": "2.6.0"
+  },
+  "engines": {
+    "npm": ">=6",
+    "node": ">=12"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "cross-env": "6.0.3",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "nodemon": "^1.19.4"
+  }
+}
